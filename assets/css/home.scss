@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    background-color: rgb(68, 63, 64);
+}
+*{
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    .top{
+        width: 25em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: yellowgreen;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        box-shadow: 0 0 5px black;
+        .icon1{
+            height: 2em;
+            margin-right: 10px;
+            
+        }
+       .header{
+        font-family: cursive;
+        font-size: 2em;
+       }
+    }
+    .contactlist{
+            
+            .contact{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: crimson;
+                width: 25rem;
+                margin-bottom: 8px;
+                border-radius: 6px;
+                box-shadow: 0 0 5px black;
+                .margin{
+                    margin: 10px 15px;
+                }
+                .para{
+                    font-family: sans-serif;
+                    font-weight:bold;
+                }
+                .icon2{
+                    cursor: pointer;
+                }
+               
+            }
+            .contact:hover{
+                background-color: rgb(250, 48, 89);
+            }
+    }
+    .addcontact{
+        width: 25em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        > input{
+            height: 2em;
+            border:none;
+            outline:none;
+            margin-bottom: 4px;
+        }
+        #name{
+            border-radius: 6px;
+            padding: 10px;
+            background-color: lightgray;
+            box-shadow: 0 0 5px black;
+        }
+        #phone{
+            border-radius: 6px;
+            padding: 10px;
+            background-color: lightgray;
+            box-shadow: 0 0 5px black;
+        }
+        #btn{
+            border-radius: 6px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            font-weight: bolder;
+            box-shadow: 0 0 5px black;
+        }
+        #btn:hover{
+            background-color: rgb(14, 125, 244);
+        }
+        
+        ::placeholder {
+            color: black;
+            font-weight: bolder;
+          }
+          input:not(:placeholder-shown) {
+            background-color: #fff;
+          }
+    }
+}

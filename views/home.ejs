@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" href="/css/home.scss">
+    </head>
+    <body>
+        <div class="container">
+            <div class="top">
+                    <img src="https://img.icons8.com/ios/50/null/call-list.png" class="icon1"/>
+                    <p class="header">Contact List</p>
+            </div>
+            <div class="contactlist">
+                    <% contact_list.forEach((obj)=> {%>
+                        <li class="contact">
+                            <p class="margin para"><%= obj.name%></p>
+                            <p class="margin para"><%= obj.phone%></p> 
+                            <a class="margin" href="/delete-contact?id=<%= obj._id%>" onclick="myfunction()">
+                                <!-- <img src="https://img.icons8.com/fluency/48/null/delete-forever.png"/> -->
+                                <img src="https://img.icons8.com/metro/26/null/trash.png" class="icon2"/>
+                            </a> 
+                        </li>
+                    <% }); %>
+            </div>
+            
+                <form action="/create-contact" method="post">
+                    <div class="addcontact">
+                    <input type="text" name="name" required placeholder="Name" id="name">
+                    <input type="number" name="phone" required placeholder="Phone" id="phone">
+                    <input type="submit" value="ADD CONTACT" id="btn">
+                </div>
+                </form>
+            
+        </div> 
+        <script>
+           function myfunction(){
+                alert("Would you like to delete contact permanently ?");
+            }
+        </script>
+    </body>
+</html>
